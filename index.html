@@ -28,7 +28,7 @@
 
   .line {
     white-space: pre-wrap;
-    word-break: break-all;
+    word-break: break-word;
   }
 
   .prompt {
@@ -96,7 +96,23 @@
 
   .project-name {
     display: inline-block;
+    width: 140px;
+  }
+
+  .col-left {
+    display: inline-block;
+    width: 140px;
+    vertical-align: top;
+  }
+
+  .exp-company {
+    display: inline-block;
     width: 120px;
+  }
+
+  .exp-desc {
+    display: inline-block;
+    width: 140px;
   }
 
   .bright {
@@ -240,62 +256,31 @@ const commands = {
     '<span class="section-title">projects</span>',
     '',
     '  <span class="project-name"><span class="bright">homelab</span></span><span class="dim">15+ services via docker + ansible</span>',
-    '  <span class="project-name"></span><span class="indent"><span class="dim">traefik, authelia, crowdsec, wireguard</span></span>',
+    '  <span class="project-name"></span><span class="dim">traefik, authelia, crowdsec, wireguard</span>',
     '&nbsp;',
     '',
     '  <span class="project-name"><span class="bright">musicmanager</span></span><span class="dim">auto-organize music with metadata</span>',
-    '  <span class="project-name"></span><span class="indent"><span class="dim">python script for metadata, art, lyrics</span></span>',
+    '  <span class="project-name"></span><span class="dim">python script for metadata, art, lyrics</span>',
   ],
 
   skills: () => [
     '<span class="section-title">skills</span>',
     '',
-    '  <span class="bright">languages</span>    python, rust, java, javascript, c, bash',
-    '  <span class="bright">devops</span>       docker, ansible, git, linux, wireguard',
-    '  <span class="bright">security</span>     pgp/gpg, wireshark, nmap, burp suite, metasploit',
-    '  <span class="bright">tools</span>        qemu/kvm, postman, neovim, linux',
+    '  <span class="col-left"><span class="bright">languages</span></span><span class="dim">python, rust, java, javascript, c, bash</span>',
+    '  <span class="col-left"><span class="bright">devops</span></span><span class="dim">docker, ansible, git, linux, wireguard</span>',
+    '  <span class="col-left"><span class="bright">security</span></span><span class="dim">pgp/gpg, wireshark, nmap, burp suite, metasploit</span>',
+    '  <span class="col-left"><span class="bright">tools</span></span><span class="dim">qemu/kvm, postman, neovim, linux</span>',
   ],
 
   experience: () => [
     '<span class="section-title">experience</span>',
     '',
-    '  <span class="bright">intern</span>                 <span class="dim">crossjoin</span>        <span class="dim">2025 - now</span>',
-    '  <span class="dim">migrating a RAG app from GCP to on-prem with open source tools</span>',
+    '  <span class="col-left"><span class="bright">intern</span></span><span class="exp-company"><span class="dim">crossjoin</span></span><span class="dim">2025 - now</span>',
+    '  <span class="exp-desc"></span><span class="dim">migrating a RAG app from GCP to on-prem with open source tools</span>',
     '&nbsp;',
     '',
-    '  <span class="bright">cs student</span>             <span class="dim">nova fct</span>           <span class="dim">2023 - now</span>',
-    '  <span class="dim">bachelor\'s in computer science and engineering</span>',
-  ],
-
-  projects: () => [
-    '<span class="section-title">projects</span>',
-    '',
-    '  <span class="project-name"><span class="bright">homelab</span></span><span class="dim">15+ services via docker + ansible</span>',
-    '  <span class="project-name"></span><span class="indent"><span class="dim">traefik, authelia, crowdsec, wireguard</span></span>',
-    '&nbsp;',
-    '',
-    '  <span class="project-name"><span class="bright">musicmanager</span></span><span class="dim">auto-organize music with metadata</span>',
-    '  <span class="project-name"></span><span class="indent"><span class="dim">python script for metadata, art, lyrics</span></span>',
-  ],
-
-  skills: () => [
-    '<span class="section-title">skills</span>',
-    '',
-    '  <span class="bright">languages</span>    python, rust, java, javascript, c, bash',
-    '  <span class="bright">devops</span>       docker, ansible, git, linux, wireguard',
-    '  <span class="bright">security</span>     pgp/gpg, wireshark, nmap, burp suite, metasploit',
-    '  <span class="bright">tools</span>        qemu/kvm, postman, neovim, linux',
-  ],
-
-  experience: () => [
-    '<span class="section-title">experience</span>',
-    '',
-    '  <span class="bright">intern</span>                 <span class="dim">crossjoin</span>        <span class="dim">2025 - now</span>',
-    '  <span class="dim">migrating a RAG app from GCP to on-prem with open source tools</span>',
-    '&nbsp;',
-    '',
-    '  <span class="bright">cs student</span>             <span class="dim">nova fct</span>           <span class="dim">2023 - now</span>',
-    '  <span class="dim">bachelor\'s in computer science and engineering</span>',
+    '  <span class="col-left"><span class="bright">cs student</span></span><span class="exp-company"><span class="dim">nova fct</span></span><span class="dim">2023 - now</span>',
+    '  <span class="exp-desc"></span><span class="dim">bachelor\'s in computer science and engineering</span>',
   ],
 
   contact: () => [
