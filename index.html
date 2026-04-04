@@ -193,7 +193,7 @@
   <div id="output"></div>
   <div id="input-line">
     <span class="prompt">
-      <span class="prompt-user">guest</span><span class="prompt-path">@portfolio</span><span class="prompt-symbol">$ </span>
+      <span class="prompt-user">msolourenco</span><span class="prompt-path">@portfolio</span><span class="prompt-symbol">$ </span>
     </span>
     <div id="input-wrapper">
       <input type="text" id="input" autofocus autocomplete="off" spellcheck="false">
@@ -255,8 +255,24 @@ const commands = {
   projects: () => [
     '<span class="section-title">projects</span>',
     '',
-    '  <span class="project-name"><span class="bright">homelab</span></span><span class="dim">15+ services via docker + ansible</span>',
+    '  <span class="project-name"><span class="bright">homelab</span></span><span class="dim">20+ services via docker + ansible</span>',
     '  <span class="project-name"></span><span class="dim">traefik, authelia, crowdsec, wireguard</span>',
+    '&nbsp;',
+    '',
+    '  <span class="project-name"><span class="bright">dwm</span></span><span class="dim">my build of dwm</span>',
+    '  <span class="project-name"></span><a href="https://github.com/FawkesOficial/dwm" target="_blank">github.com/FawkesOficial/dwm</a>',
+    '&nbsp;',
+    '',
+    '  <span class="project-name"><span class="bright">freetubedb</span></span><span class="dim">python library for freetube playlists.db</span>',
+    '  <span class="project-name"></span><a href="https://github.com/FawkesOficial/python-freetubedb" target="_blank">github.com/FawkesOficial/python-freetubedb</a>',
+    '&nbsp;',
+    '',
+    '  <span class="project-name"><span class="bright">dotfiles</span></span><span class="dim">my linux dotfiles</span>',
+    '  <span class="project-name"></span><a href="https://github.com/FawkesOficial/dotfiles" target="_blank">github.com/FawkesOficial/dotfiles</a>',
+    '&nbsp;',
+    '',
+    '  <span class="project-name"><span class="bright">advent-of-code</span></span><span class="dim">my advent of code submissions</span>',
+    '  <span class="project-name"></span><a href="https://github.com/FawkesOficial/advent-of-code" target="_blank">github.com/FawkesOficial/advent-of-code</a>',
     '&nbsp;',
     '',
     '  <span class="project-name"><span class="bright">musicmanager</span></span><span class="dim">auto-organize music with metadata</span>',
@@ -275,7 +291,7 @@ const commands = {
   experience: () => [
     '<span class="section-title">experience</span>',
     '',
-    '  <span class="col-left"><span class="bright">intern</span></span><span class="exp-company"><span class="dim">crossjoin</span></span><span class="dim">2025 - now</span>',
+    '  <span class="col-left"><span class="bright">intern</span></span><span class="exp-company"><span class="dim">crossjoin</span></span><span class="dim">2026 - now</span>',
     '  <span class="exp-desc"></span><span class="dim">migrating a RAG app from GCP to on-prem with open source tools</span>',
     '&nbsp;',
     '',
@@ -299,7 +315,7 @@ const commands = {
     return lines;
   },
 
-  pwd: () => ['/home/guest'],
+  pwd: () => ['/home/msolourenco'],
 
   ls: (arg) => {
     if (arg === 'projects') return commands.projects();
@@ -310,7 +326,7 @@ const commands = {
     ];
   },
 
-  whoami: () => ['guest'],
+  whoami: () => ['msolourenco'],
 
   '?': () => commands.help(),
 
@@ -340,14 +356,14 @@ const commands = {
     div.innerHTML = `
       <img src="ascii-pepe.gif" alt="ascii pepe">
       <div class="neofetch-info">
-        <div><span class="neofetch-label">Mário</span><span class="neofetch-value">@</span><span class="neofetch-label">portfolio</span></div>
+        <div><span class="neofetch-label">msolourenco</span><span class="neofetch-value">@</span><span class="neofetch-label">portfolio</span></div>
         <div>─────────────────────</div>
         <div><span class="neofetch-label">OS</span><span class="neofetch-value">: Void Linux x86_64</span></div>
-        <div><span class="neofetch-label">Host</span><span class="neofetch-value">: Custom Build</span></div>
+        <div><span class="neofetch-label">Host</span><span class="neofetch-value">: Thinkpad T480 (librebooted ofc)</span></div>
         <div><span class="neofetch-label">Kernel</span><span class="neofetch-value">: Linux 6.19.6-arch1-1</span></div>
         <div><span class="neofetch-label">Uptime</span><span class="neofetch-value">: 42 days, 3 hours</span></div>
-        <div><span class="neofetch-label">Shell</span><span class="neofetch-value">: zsh 5.9</span></div>
-        <div><span class="neofetch-label">DE</span><span class="neofetch-value">: Hyprland</span></div>
+        <div><span class="neofetch-label">Shell</span><span class="neofetch-value">: zsh</span></div>
+        <div><span class="neofetch-label">WM</span><span class="neofetch-value">: Hyprland</span></div>
         <div><span class="neofetch-label">Terminal</span><span class="neofetch-value">: foot</span></div>
         <div><span class="neofetch-label">CPU</span><span class="neofetch-value">: Intel i5-6500 (4) @ 3.60GHz</span></div>
         <div><span class="neofetch-label">GPU</span><span class="neofetch-value">: NVIDIA GTX 1060 6GB</span></div>
@@ -389,7 +405,7 @@ function runCommand(cmd) {
   history.unshift(cmd);
   historyIndex = -1;
 
-  print(`<span class="prompt"><span class="prompt-user">guest</span><span class="prompt-path">@portfolio</span><span class="prompt-symbol">$ </span></span><span class="bright">${escapeHtml(cmd)}</span>`);
+  print(`<span class="prompt"><span class="prompt-user">msolourenco</span><span class="prompt-path">@portfolio</span><span class="prompt-symbol">$ </span></span><span class="bright">${escapeHtml(cmd)}</span>`);
 
   if (name === 'clear') {
     output.innerHTML = '';
@@ -451,7 +467,7 @@ input.addEventListener('keydown', (e) => {
       if (completions.length === 1) {
         input.value = cmd + ' ' + completions[0] + ' ';
       } else if (completions.length > 1) {
-        print(`<span class="prompt"><span class="prompt-user">guest</span><span class="prompt-path">@portfolio</span><span class="prompt-symbol">$ </span></span><span class="bright">${escapeHtml(val)}</span>`);
+        print(`<span class="prompt"><span class="prompt-user">msolourenco</span><span class="prompt-path">@portfolio</span><span class="prompt-symbol">$ </span></span><span class="bright">${escapeHtml(val)}</span>`);
         print(completions.map(c => `  <span class="bright">${c}</span>`).join('  '));
       }
     }
