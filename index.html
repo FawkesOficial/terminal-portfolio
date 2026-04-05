@@ -246,6 +246,9 @@ const commands = {
   ],
 
   about: () => [
+    '<img src="https://avatars.githubusercontent.com/u/45067011" alt="profile picture" style="width:120px;height:120px;display:block;margin-bottom:8px;">',
+    '<span class="bright">Mário Lourenço</span>',
+    '&nbsp;',
     '<span class="section-title">about</span>',
     '',
     '  cs student at nova fct. interested in',
@@ -323,6 +326,7 @@ const commands = {
     return [
       '<span class="bright">about.txt</span>    <span class="bright">projects/</span>    <span class="bright">skills.txt</span>',
       '<span class="bright">experience/</span>  <span class="bright">contact.md</span>   <span class="bright">resume.pdf</span>',
+      '<span class="bright">pfp.png</span>',
     ];
   },
 
@@ -336,6 +340,7 @@ const commands = {
       'skills.txt': 'skills',
       'contact.md': 'contact',
       'resume.pdf': () => commands.all(),
+      'pfp.png': () => ['<img src="https://avatars.githubusercontent.com/u/45067011" alt="profile picture" style="width:200px;height:200px;">'],
     };
     if (!arg) return ['<span class="dim">cat: missing file operand</span>'];
     if (fileMap[arg]) {
@@ -462,7 +467,7 @@ input.addEventListener('keydown', (e) => {
       if (cmd === 'ls') {
         completions = ['projects', 'experience'].filter(c => c.startsWith(arg));
       } else if (cmd === 'cat') {
-        completions = ['about.txt', 'skills.txt', 'contact.md', 'resume.pdf'].filter(c => c.startsWith(arg));
+        completions = ['about.txt', 'skills.txt', 'contact.md', 'resume.pdf', 'pfp.png'].filter(c => c.startsWith(arg));
       }
       if (completions.length === 1) {
         input.value = cmd + ' ' + completions[0] + ' ';
